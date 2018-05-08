@@ -65,11 +65,6 @@ export default class ToDo extends Component{
     return(
       <View>
         <View>
-        <View style={styles.header}>
-        <Text style = {{fontSize:40}}>
-          {this.props.name}
-        </Text>
-        </View>
         <View style={{flexDirection:"row"}}>
         <TextInput style={{flex:1,color:'black',fontSize:30}}
           placeholder="write ToDo"
@@ -90,17 +85,3 @@ export default class ToDo extends Component{
       );
     }
   }
-  const styles = StyleSheet.create({
-    // container: {
-    //   marginTop: 20,
-    //   flex: 1,
-    // },
-
-    header:{
-      backgroundColor:'#6A1B9A',
-      alignItems:'center',
-
-      borderBottomWidth:10,
-      borderBottomColor:'#ddd',
-    }
-  })

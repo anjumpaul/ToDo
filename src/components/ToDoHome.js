@@ -4,11 +4,12 @@ import { View,Text,Button,StyleSheet,TouchableOpacity} from 'react-native';
 export default class ToDoHome extends Component{
   constructor(){
     super()
-    this.state={color:'green',textBackgroundColor:'yellow'}
+    this.state={color:'green',
+                textBackgroundColor:'yellow',}
   }
   render(){
     return(
-
+      <View>
       <View key={this.props.keyval} style={{flexDirection:'row'}}>
         <Button onPress={()=>this.setState({color:'red',textBackgroundColor:'red'})}
             title='Completed'
@@ -19,7 +20,10 @@ export default class ToDoHome extends Component{
             color='#EF5350'/>
 
       </View>
-
+      <ScrollView >
+        {notes}
+      </ScrollView>
+      </View>
     );
   }
 }
